@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Google adsense
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5138475310868565",
+    enable_page_level_ads: true
+  });
+</script>
+ -->
+
+  <!-- 탭에 나타나는 부분 -->
+  <title>
+    
+      개발자 계정 등록하지 않고 아이폰으로 테스트하기 &middot; jum0
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/main.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"> </script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } });
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <div class="sidebar-personal-info">
+      <div class="sidebar-personal-info-section">
+        <img src="/public/img/profile.jpg" title="Hi there! :-)" alt="Hi there! :-)" />
+      </div>
+      <div class="sidebar-personal-info-section">
+        <p><strong>jum0</strong> <br> iOS & Swift</p>
+      </div>
+      
+      
+      
+      <div class="sidebar-personal-info-section">
+        <p> Contact me :&nbsp;
+        
+        
+        
+        <a href="https://github.com/jinios">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        
+        |
+        
+        
+        
+        <a href="mailto:jinios.dev@gmail.com">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        </p>
+      </div>
+      
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    
+      
+      
+      
+
+      
+
+      <span class="foldable">
+        <a class="sidebar-nav-item " href="/blog/categories">
+          Categories
+        </a>
+
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#TIL">
+                TIL
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Project">
+                Project
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Swift">
+                Swift
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#iOS">
+                iOS
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Life">
+                Life
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/tags/">
+                Tags
+              </a>
+          
+        
+      </span>
+
+    
+      
+      
+      
+
+      
+
+      <span class="">
+        <a class="sidebar-nav-item " href="https://github.com/jum0">
+          Github Project
+        </a>
+
+        
+      </span>
+
+    
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+    &copy; 2020 jum0. This work is liscensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+    </p>
+  </div>
+
+  <div class="sidebar-item">
+    <p>
+    Powered by <a href="http://jekyllrb.com">jekyll</a> and <a href="http://codinfox.github.io">codinfox-lanyon</a>
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home" title="jum0">
+              <!-- 로고 크기 -->
+              <img class="masthead-logo" src="/public/logo.png" style="max-width: 30%; height: auto;"/>
+              <!-- <img class="masthead-logo" src="/public/logo.png"/> -->
+            </a>
+            <small>학습 기록장</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">개발자 계정 등록하지 않고 아이폰으로 테스트하기</h1>
+  <span class="post-date">21 Dec 2019</span>
+   | 
+  
+    <a href="/blog/tags/#ios" class="post-tag">iOS</a>
+  
+    <a href="/blog/tags/#developer-account" class="post-tag">Developer-Account</a>
+  
+    <a href="/blog/tags/#build" class="post-tag">build</a>
+  
+  
+  <article>
+    <p>아이폰으로 Xcode를 빌드하기 위해서는 몇 가지만 체크하면 된다.</p>
+
+<ol>
+  <li>Xcode와 iOS 버전 확인</li>
+  <li>애플 개발자 계정 추가하기</li>
+  <li>앱 서명하기(sign the app)</li>
+</ol>
+
+<h3 id="1-xcode와-ios-버전-확인">1. Xcode와 iOS 버전 확인</h3>
+
+<h4 id="11-xcode-버전-확인">1.1 Xcode 버전 확인</h4>
+
+<p><img src="http://localhost:4000/assets/img/post_img/191221/1.png" /></p>
+
+<p>Xcode 버전은 사진과 같이 상단 메뉴 바에서 <strong>Xcode - About Xcode </strong>를 눌러보면 확인할 수 있다.</p>
+
+<h4 id="12-ios-버전-확인">1.2 iOS 버전 확인</h4>
+
+<p><img src="http://localhost:4000/assets/img/post_img/191221/2.png" /></p>
+
+<p>영어</p>
+
+<ul>
+  <li><strong>General - About</strong></li>
+</ul>
+
+<p>한글</p>
+
+<ul>
+  <li><strong>설정 - 일반 - 정보</strong></li>
+</ul>
+
+<p>여기서 <strong>Xcode와 iOS의 버전(소수점)이 동일한지 확인</strong>해주면 된다.</p>
+
+<p>두 버전이 같지 않다면, 쉽게 맞출 수 있는 방법으로 둘다 최신으로 업데이트해주면 된다.</p>
+
+<p>(19.12.21 기준 Xcode 최신 버전 11.3, iOS 최신 버전 13.3)</p>
+
+<h3 id="2-애플-개발자-계정-추가하기">2. 애플 개발자 계정 추가하기</h3>
+
+<p><img src="http://localhost:4000/assets/img/post_img/191221/3.png" /></p>
+
+<p>개발자 계정 추가는 메뉴에서 <strong>Xcode - Preferences - Accounts - +버튼</strong>으로 Apple 계정의 ID와 PW를 입력하면 된다.</p>
+
+<p><img src="http://localhost:4000/assets/img/post_img/191221/4.png" /></p>
+
+<p>계정 추가를 마친 화면은 위의 사진과 같다.(개인정보는 가렸어요.)</p>
+
+<h3 id="3-앱-서명하기-sign-the-app">3. 앱 서명하기 (sign the app)</h3>
+
+<p>sign을 임의로 저렇게 번역했는데, 사실 정확하게 의미를 전달했는지 잘 모르겠다ㅋㅋ</p>
+
+<p><img src="http://localhost:4000/assets/img/post_img/191221/5.png" /></p>
+
+<p>사진과 같이 왼쪽 메뉴에서 프로젝트를 클릭하고 상단에 <strong>Signing &amp; Capabilities</strong>를 눌러 나오는 내용을 확인한다.</p>
+
+<p>여기에서 확인한 부분은 다음과 같다.</p>
+
+<ol>
+  <li>Automatically manage signing에 체크가 되어 있는지</li>
+  <li>Team이 아까 2번에서  추가한 계정으로 되어 있는지</li>
+</ol>
+
+<p>이제 아이폰을 연결하고 첫 번째 사진의 빨간 박스 부분을 두 번째 사진과 같이 바꿔준다.</p>
+
+<p><img src="http://localhost:4000/assets/img/post_img/191221/6.png" alt="pic1" /></p>
+
+<p>​</p>
+
+<p><img src="http://localhost:4000/assets/img/post_img/191221/7.png" alt="pic2" /></p>
+
+<p>그리고 빌드를 하면 끝이 난다.</p>
+
+<p>참고로 빌드할 때, 나오는 keychain은 따로 변경하지 않았다면, 맥의 비밀번호를 입력하면 된다.</p>
+
+<p><img src="http://localhost:4000/assets/img/post_img/191221/8.png" /></p>
+
+<p>또, 맥과 아이폰이 같은 네트워크에 연결되어 있다면 <strong>Window - Device and Simulators</strong>에서 <strong>Connect via network</strong> 박스에 체크해줌으로써 맥과 아이폰을  연결하지 않고  블루투스로도 빌드가 가능하다.</p>
+
+<p>혹시라도 잘못된 부분이 있으면 알려주세요!</p>
+
+
+  </article>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/ios/2019/12/27/one-line-delete-shortcut-in-xcode/">
+            한 줄 삭제 단축키
+            <small>27 Dec 2019</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2014/01/02/introducing-lanyon/">
+            Introducing Lanyon
+            <small>02 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2014/01/01/example-content/">
+            Example content
+            <small>01 Jan 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+<div class="comments">
+  <h2>Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+var disqus_config = function () {
+  this.page.url = 'http://localhost:4000/ios/2019/12/21/iPhone_test_without_developer_account/'; // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = '/ios/2019/12/21/iPhone_test_without_developer_account'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = '//youth27.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if (target === toggle) {
+            checkbox.checked = !checkbox.checked;
+            e.preventDefault();
+          } else if (checkbox.checked && !sidebar.contains(target)) {
+            /* click outside the sidebar when sidebar is open */
+            checkbox.checked = false;
+          }
+        }, false);
+      })(document);
+    </script>
+    
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-00000000-1', 'auto');
+ga('send', 'pageview');
+    </script>
+    
+  </body>
+  
+  <script id="dsq-count-scr" src="//youth27.disqus.com/count.js" async></script>
+  
+</html>

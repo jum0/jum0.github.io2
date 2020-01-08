@@ -1,0 +1,68 @@
+# Site Info
+title: jum0
+tagline: '학습 기록장'
+description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
+baseurl: ""
+url: https://jum0.github.io
+logo: '/public/logo.png'
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: jum0
+  description: <strong>jum0</strong> <br> iOS & Swift
+  gravatar: # md5 hash of your email address
+  contact:
+#    linkedin:
+    github: https://github.com/jinios
+#    facebook:
+#    twitter:
+#    weibo:
+    email: mailto:jinios.dev@gmail.com
+    
+# Navigation (2nd level links supported)
+nav:
+#  Home:
+#    - '/'
+  Categories:
+    - '/blog/categories'
+#    - { Categories: '/blog/categories/' }
+    - { TIL: '/blog/categories/#TIL' }
+    - { Project: '/blog/categories/#Project' }
+    - { Swift: '/blog/categories/#Swift' }
+    - { iOS: '/blog/categories/#iOS' }
+#    - { Algorithm '/blog/categoreis/#Algorithm' }
+    - { Life: '/blog/categories/#Life' }
+    - { Tags: '/blog/tags/' }
+  Github Project:
+    - 'https://github.com/jum0'
+#  About: # 스펙이나 그런 소개용 페이지
+#    - '/about/'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+hero:
+  image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
+disqus_short_name: 'youth27' # leave blank if you don't want disqus
