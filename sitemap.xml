@@ -1,20 +1,62 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
-    <url>
-        <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
-    </url>
-    {% endfor %}
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-    {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
-    <url>
-        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-    </url>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+
+<url>
+  <loc>https://jum0.github.io/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/blog/categories/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/blog/tags/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/ios/2019/12/27/one-line-delete-shortcut-in-xcode/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/ios/2019/12/21/iPhone_test_without_developer_account/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/2014/01/02/introducing-lanyon/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/404</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/about/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/2014/01/01/example-content/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jum0.github.io/2013/12/31/whats-jekyll/</loc>
+  <lastmod>2020-01-08T19:10:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
