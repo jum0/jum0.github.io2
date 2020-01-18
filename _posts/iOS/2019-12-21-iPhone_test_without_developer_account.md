@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 개발자 계정 등록하지 않고 아이폰으로 테스트하기
+title: [iOS]개발자 계정 등록하지 않고 아이폰으로 테스트하기
 tags: iOS Developer-Account build
 categories: iOS
 ---
