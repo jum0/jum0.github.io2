@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Swift] Class와 Struct 비교
+title: Class와 Struct 비교
 tags: Swift class struct
 categories: Swift
 ---
