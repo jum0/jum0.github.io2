@@ -152,7 +152,7 @@ class Residence {
 let jumo = Person()
 ```
 
-> residence 변수가 Residence 클래스를 상속받고 있는데, Residence 클래스의 type이 optional이므로 Person 타입의 인스턴스(jumo)가 만들어졌을 때,  변수 residence의 초기값은 nil이 됨(기본값을 설정하지 않고 optional 변수를 선언하므로).
+> residence 변수가 Residence 클래스를 상속받고 있는데, Residence 클래스의 type이 optional이므로 Person 타입의 인스턴스(jumo)가 만들어졌을 때,  변수 residence의 초기값은 nil이 됨(초기값을 설정하지 않고 optional 변수를 선언하므로).
 
 ```swift
 if let roomCount = jumo.residence?.numberOfRooms {
@@ -169,10 +169,31 @@ if let roomCount = jumo.residence?.numberOfRooms {
 
 ## 6. Nil Coalescing Operator
 
-- 삼항연산자와 비슷함.
-  - 값이 존재하면 
+- nil-coalescing operator을 삼항다항식으로 나타내면 아래의 코드와 같은 의미를 지님.
 
-- 
+  ```swift
+  a != nil ? a! : b
+  // a의 값이 nil이 아니면 a에 a를 forced-unwrap한 값(a!)을 넣고, nil이라면 a에 b의 값을 할당함.
+  ```
+
+- `??` 사용.
+
+```swift
+let defaultColorName = "red"
+var userDefinedColorName: String? // 초기값 nil
+
+var colorNameToUse = userDefinedColorName ?? defaultColorName
+// userDefinedColorName이 nil이므로, colorNameToUse 변수에 defaultColorName의 값인 "red"를 할당함.
+```
+
+```swift
+userDefinedColorName = "green"
+colorNameToUse = userDefinedColorNmae ?? defaultColorName
+// userDefinedColorName의 값이 nil이 아니므로 colorNameToUse에 할당함.
+// colorNameToUse의 값은 "green"이 됨.
+```
+
+
 
 혹시 잘못된 부분이 있으면 말씀해주세요! 감사합니다:)
 
