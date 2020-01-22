@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Class와 Struct 비교
+title: Swift) Class와 Struct 비교
 tags: Swift class struct
 categories: Swift
 ---
@@ -12,7 +12,7 @@ categories: Swift
 
 #### 3. struct
 
-#### 4. 참고
+#### 4. 참고 
 
 
 
@@ -75,11 +75,13 @@ class VIPAccount: AccountClass {
 ```
 
 - 상속
-  - `class VIPAccount`는 `class AccountClass`를 상속하고 있음. `VIPAccount.swift`에서 `class VIPAccount` 옆에 상속받을 클래스(`AccountClass`)를 씀.
-
+  
+- `class VIPAccount`는 `class AccountClass`를 상속하고 있음. `VIPAccount.swift`에서 `class VIPAccount` 옆에 상속받을 클래스(`AccountClass`)를 씀.
+  
 - 초기화
-  - `Account.swift`에서 `var name: String`과 같이 프로퍼티의 타입만 적어준 경우 `init` 키워드를 통해 초기화를 해야함. `var name = "jumo"`와 같이 `class` 안의 프로퍼티에 값을 지정한 경우 초기화하지 않아도 됨.
-
+  
+- `Account.swift`에서 `var name: String`과 같이 프로퍼티의 타입만 적어준 경우 `init` 키워드를 통해 초기화를 해야함. `var name = "jumo"`와 같이 `class` 안의 프로퍼티에 값을 지정한 경우 초기화하지 않아도 됨.
+  
 - Pass(call) by reference
 
   - 예를 들어, `account1`이라는 계좌가 `Desktop/jum0.github.io/_post/Swift`에 있다고 가정하고 `let account2 = account1`이라고 했을 때, `account2`에게 `account1` 계좌가 있는 위 주소를 전달하는 것.
@@ -142,8 +144,9 @@ struct AccountStruct {
 
 - 상속 불가능
 - 초기화
-  - 초기화하는 것은 선택 (`init` 키워드).
-
+  
+- 초기화하는 것은 선택 (`init` 키워드).
+  
 - Pass(call) by value
 
   - ```swift
@@ -193,6 +196,7 @@ struct AccountStruct {
     ```
 
 - Apple에서는 Default로 struct 사용하기를 권장
+  
   - https://developer.apple.com/documentation/swift/choosing_between_structures_and_classes
 
 
