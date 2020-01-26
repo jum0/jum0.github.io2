@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155816643-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-155816643-1');
+</script>
+
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- 탭에 나타나는 부분 -->
+  <title>
+    
+      Swift) Class와 Struct 비교 &middot; jum0
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/main.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"> </script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } });
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <div class="sidebar-personal-info">
+      <div class="sidebar-personal-info-section">
+        <img src="/public/img/profile.png" title="Hi there! :-)" alt="Hi there! :-)" />
+      </div>
+      <div class="sidebar-personal-info-section">
+        <p><strong>jum0</strong> <br> iOS & Swift</p>
+      </div>
+      
+      
+      
+      <div class="sidebar-personal-info-section">
+        <p> Contact me :&nbsp;
+        
+        
+        
+        <a href="https://github.com/jinios">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        
+        |
+        
+        
+        
+        <a href="mailto:jinios.dev@gmail.com">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        
+        
+        
+        </p>
+      </div>
+      
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    
+      
+      
+      
+
+      
+
+      <span class="foldable">
+        <a class="sidebar-nav-item " href="/blog/categories">
+          Categories
+        </a>
+
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#TIL">
+                <!-- TIL -->
+                
+                TIL 
+                  
+                  
+                  ( 9 )
+                   <!-- 윗 부분이 괄호  -->
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Project">
+                <!-- Project -->
+                
+                Project 
+                  
+                  
+                  ( 0 )
+                   <!-- 윗 부분이 괄호  -->
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Swift">
+                <!-- Swift -->
+                
+                Swift 
+                  
+                  
+                  ( 2 )
+                   <!-- 윗 부분이 괄호  -->
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#iOS">
+                <!-- iOS -->
+                
+                iOS 
+                  
+                  
+                  ( 2 )
+                   <!-- 윗 부분이 괄호  -->
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Life">
+                <!-- Life -->
+                
+                Life 
+                  
+                  
+                  ( 0 )
+                   <!-- 윗 부분이 괄호  -->
+              </a>
+          
+        
+          
+            
+            
+            
+              <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/tags/">
+                <!-- Tags -->
+                
+                Tags 
+                  
+                  
+                  ( 0 )
+                   <!-- 윗 부분이 괄호  -->
+              </a>
+          
+        
+      </span>
+
+    
+      
+      
+      
+
+      
+
+      <span class="">
+        <a class="sidebar-nav-item " href="https://github.com/jum0">
+          Github Project
+        </a>
+
+        
+      </span>
+
+    
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+    &copy; 2020 jum0. This work is liscensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+    </p>
+  </div>
+
+  <div class="sidebar-item">
+    <p>
+    Powered by <a href="http://jekyllrb.com">jekyll</a> and <a href="http://codinfox.github.io">codinfox-lanyon</a>
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home" title="jum0">
+              <!-- 로고 크기 -->
+              <img class="masthead-logo" src="/public/logo.png" style="max-width: 30%; height: auto;"/>
+              <!-- <img class="masthead-logo" src="/public/logo.png"/> -->
+            </a>
+            <small>학습 기록장</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Swift) Class와 Struct 비교</h1>
+  <span class="post-date">18 Jan 2020</span>
+   | 
+  
+    <a href="/blog/tags/#swift" class="post-tag">Swift</a>
+  
+    <a href="/blog/tags/#class" class="post-tag">class</a>
+  
+    <a href="/blog/tags/#struct" class="post-tag">struct</a>
+  
+  
+  <article>
+    <h2 id="목차">목차</h2>
+
+<h4 id="1-class-와-struct-비교">1. class 와 struct 비교</h4>
+
+<h4 id="2-class">2. class</h4>
+
+<h4 id="3-struct">3. struct</h4>
+
+<h4 id="4-참고">4. 참고</h4>
+
+<h2 id="1-class-와-struct-비교-1">1. class 와 struct 비교</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">Class</th>
+      <th style="text-align: center">Struct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>상속</strong></td>
+      <td style="text-align: center">가능</td>
+      <td style="text-align: center">불가능</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>초기화</strong></td>
+      <td style="text-align: center">필요</td>
+      <td style="text-align: center">선택</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>데이터 전달</strong></td>
+      <td style="text-align: center">Pass(call) by reference</td>
+      <td style="text-align: center">Pass(call) by value</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>기타</strong></td>
+      <td style="text-align: center">override (상속과 관련)</td>
+      <td style="text-align: center">mutating</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="2-class-1">2. Class</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// main.swift</span>
+
+<span class="k">let</span> <span class="nv">account1</span> <span class="o">=</span> <span class="kt">VIPAccount</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"jumo"</span><span class="p">,</span> <span class="nv">balance</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">account2</span> <span class="o">=</span> <span class="n">account1</span>
+
+<span class="n">account1</span><span class="o">.</span><span class="nf">withdraw10000won</span><span class="p">()</span>
+<span class="c1">// 인출금은 10000원, 수수료는 500원, 잔액은 39500원입니다.</span>
+<span class="c1">// VIP고객으로 수수료 500원이 입금되었습니다. 잔액은 40000원입니다</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">account1</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span> <span class="c1">// 40000</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">account2</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span> <span class="c1">// 40000</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// AccountClass.swift - 부모 클래스(super class)</span>
+
+<span class="c1">// struct Accont와 구분하기 위해서 AccountClass를 사용</span>
+<span class="kd">class</span> <span class="kt">AccountClass</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+  <span class="k">var</span> <span class="nv">balance</span><span class="p">:</span> <span class="kt">Int</span>
+  
+  <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">balance</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span>
+  <span class="p">}</span>
+  
+  <span class="kd">func</span> <span class="nf">withdraw10000won</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">balance</span> <span class="o">-=</span> <span class="mi">10500</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"인출금은 10000원, 수수료는 500원, 잔액은 </span><span class="se">\(</span><span class="n">balance</span><span class="se">)</span><span class="s">원입니다."</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// VIPAccount.swift - 자식 클래스(sub class)</span>
+
+<span class="kd">class</span> <span class="kt">VIPAccount</span><span class="p">:</span> <span class="kt">AccountClass</span> <span class="p">{</span>
+  <span class="k">override</span> <span class="kd">func</span> <span class="nf">withdraw10000won</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">withdraw10000won</span><span class="p">()</span>
+    <span class="n">balance</span> <span class="o">+=</span> <span class="mi">500</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"VIP고객으로 수수료 500원이 입금되었습니다. 잔액은 </span><span class="se">\(</span><span class="n">balance</span><span class="se">)</span><span class="s">원입니다."</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>상속</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">class VIPAccount</code>는 <code class="highlighter-rouge">class AccountClass</code>를 상속하고 있음. <code class="highlighter-rouge">VIPAccount.swift</code>에서 <code class="highlighter-rouge">class VIPAccount</code> 옆에 상속받을 클래스(<code class="highlighter-rouge">AccountClass</code>)를 씀.</p>
+  </li>
+  <li>
+    <p>초기화</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">Account.swift</code>에서 <code class="highlighter-rouge">var name: String</code>과 같이 프로퍼티의 타입만 적어준 경우 <code class="highlighter-rouge">init</code> 키워드를 통해 초기화를 해야함. <code class="highlighter-rouge">var name = "jumo"</code>와 같이 <code class="highlighter-rouge">class</code> 안의 프로퍼티에 값을 지정한 경우 초기화하지 않아도 됨.</p>
+  </li>
+  <li>
+    <p>Pass(call) by reference</p>
+
+    <ul>
+      <li>
+        <p>예를 들어, <code class="highlighter-rouge">account1</code>이라는 계좌가 <code class="highlighter-rouge">Desktop/jum0.github.io/_post/Swift</code>에 있다고 가정하고 <code class="highlighter-rouge">let account2 = account1</code>이라고 했을 때, <code class="highlighter-rouge">account2</code>에게 <code class="highlighter-rouge">account1</code> 계좌가 있는 위 주소를 전달하는 것.</p>
+      </li>
+      <li>
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// main.swift</span>
+    
+<span class="k">let</span> <span class="nv">account1</span> <span class="o">=</span> <span class="kt">VIPAccount</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"jumo"</span><span class="p">,</span> <span class="nv">balance</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">account2</span> <span class="o">=</span> <span class="n">account1</span>
+    
+<span class="n">account1</span><span class="o">.</span><span class="nf">withdraw10000won</span><span class="p">()</span>
+<span class="c1">// 인출금은 10000원, 수수료는 500원, 잔액은 39500원입니다.</span>
+<span class="c1">// VIP고객으로 수수료 500원이 입금되었습니다. 잔액은 40000원입니다</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">account1</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span> <span class="c1">// 40000</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">account2</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span> <span class="c1">// 40000</span>
+</code></pre></div>        </div>
+
+        <p>class는 pass(call) by reference이므로 <code class="highlighter-rouge">account1.withdraw10000won()</code>와 같이 <code class="highlighter-rouge">account1</code>의 메서드를 실행해도  <code class="highlighter-rouge">account1.balance</code>와  <code class="highlighter-rouge">account2.balence2</code>가 같이 바뀜.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>override</p>
+
+    <ul>
+      <li>override 키워드를 통해서 super class의 메서드에 덮어쓰기 가능. super class에 있는 있는 메서드를 사용하려면 <code class="highlighter-rouge">super.메서드명</code>을 통해서 사용 가능(override func 말고도 sub class 내에서 자유롭게 사용 가능).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3-struct-1">3. Struct</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// main.swift</span>
+
+<span class="k">var</span> <span class="nv">account1</span> <span class="o">=</span> <span class="kt">AccountStruct</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"jumo"</span><span class="p">,</span> <span class="nv">balance</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span> 
+<span class="c1">// 초기화 생략하면 AccountStrcut()도 가능</span>
+<span class="k">var</span> <span class="nv">account2</span> <span class="o">=</span> <span class="n">account1</span>
+
+<span class="n">account1</span><span class="o">.</span><span class="nf">withdraw10000won</span><span class="p">()</span> <span class="c1">// 인출금은 10000원, 수수료는 500원, 잔액은 39500원입니다.</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">account1</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span> <span class="c1">// 39500</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">account2</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span> <span class="c1">// 50000</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// AccountStruct.swift</span>
+
+<span class="c1">// class Accont와 구분하기 위해서 AccountStruct를 사용</span>
+<span class="kd">struct</span> <span class="kt">AccountStruct</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+  <span class="k">var</span> <span class="nv">balance</span><span class="p">:</span> <span class="kt">Int</span>
+    
+  
+  <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">balance</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span>
+  <span class="p">}</span>
+
+  <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">withdraw10000won</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">balance</span> <span class="o">-=</span> <span class="mi">10500</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"인출금은 10000원, 수수료는 500원, 잔액은 </span><span class="se">\(</span><span class="n">balance</span><span class="se">)</span><span class="s">원입니다."</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>상속 불가능</li>
+  <li>
+    <p>초기화</p>
+  </li>
+  <li>
+    <p>초기화하는 것은 선택 (<code class="highlighter-rouge">init</code> 키워드).</p>
+  </li>
+  <li>
+    <p>Pass(call) by value</p>
+
+    <ul>
+      <li>
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// main.swift</span>
+    
+<span class="k">var</span> <span class="nv">account1</span> <span class="o">=</span> <span class="kt">AccountStruct</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"jumo"</span><span class="p">,</span> <span class="nv">balance</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span> 
+<span class="c1">// 초기화 생략하면 AccountStrcut()도 가능</span>
+<span class="k">var</span> <span class="nv">account2</span> <span class="o">=</span> <span class="n">account1</span>
+    
+<span class="n">account1</span><span class="o">.</span><span class="nf">withdraw10000won</span><span class="p">()</span> <span class="c1">// 인출금은 10000원, 수수료는 500원, 잔액은 39500원입니다.</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">account1</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span> <span class="c1">// 39500</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">account2</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span> <span class="c1">// 50000</span>
+</code></pre></div>        </div>
+      </li>
+      <li>class와 다르게 <code class="highlighter-rouge">var account2 = account1</code>는 같은 <code class="highlighter-rouge">account1</code>이 가리키는 인스턴스(객체)를 참조하는 것이 아닌 새로운 객체 생성을 의미하므로 <code class="highlighter-rouge">account1.withdraw10000won()</code> 코드 실행 후, <code class="highlighter-rouge">account1.balance</code>와 <code class="highlighter-rouge">account2.balance</code>는 다름.</li>
+    </ul>
+  </li>
+  <li>mutating
+    <ul>
+      <li>struct 내의 메서드 중에서 프로퍼티에 영향을 주면(update) <code class="highlighter-rouge">mutating</code> 키워드를 붙임.</li>
+      <li><code class="highlighter-rouge">AccountStruct.swift</code>에서 <code class="highlighter-rouge">withdraw10000won</code> 메서드에 <code class="highlighter-rouge">mutating</code> 키워드를 붙는 이유는 struct 내의 프로퍼티(<code class="highlighter-rouge">balance</code>)에 영향을 주는 메서드이기 때문.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="4-참고-1">4. 참고</h2>
+
+<ul>
+  <li>
+    <p>초기화 할 때, parameter를 변경할 수 있음</p>
+
+    <ul>
+      <li>
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">AccountStruct</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+  <span class="k">var</span> <span class="nv">balance</span><span class="p">:</span> <span class="kt">Int</span>
+        
+  <span class="c1">// parameter 변경</span>
+  <span class="nf">init</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">b</span>
+  <span class="p">}</span>
+    
+  <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">withdraw10000won</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">balance</span> <span class="o">-=</span> <span class="mi">10500</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"인출금은 10000원, 수수료는 500원, 잔액은 </span><span class="se">\(</span><span class="n">balance</span><span class="se">)</span><span class="s">원입니다."</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">account1</span> <span class="o">=</span> <span class="kt">Account</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="s">"jumo"</span><span class="p">,</span> <span class="nv">b</span><span class="p">:</span> <span class="mi">50000</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Apple에서는 Default로 struct 사용하기를 권장</p>
+
+    <ul>
+      <li>https://developer.apple.com/documentation/swift/choosing_between_structures_and_classes</li>
+    </ul>
+  </li>
+</ul>
+
+<p>혹시 잘못된 부분이 있으면 말씀해주세요! 감사합니다:)</p>
+
+
+  </article>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/til/2020/01/24/TIL/">
+            TIL_20200124
+            <small>24 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/swift/2020/01/22/optional-optional_binding-optional_chaining-nil_coalescing/">
+            Swift) Optionals / nil / Forced Unwrapping / Optional Binding / Optional Chaining / Nil Coalescing Operator 정리
+            <small>22 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/til/2020/01/21/TIL/">
+            TIL_20200121
+            <small>21 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+<div class="comments">
+  <h2>Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+var disqus_config = function () {
+  this.page.url = 'http://localhost:4000/swift/2020/01/18/class_versus_struct/'; // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = '/swift/2020/01/18/class_versus_struct'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = '//jum0.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if (target === toggle) {
+            checkbox.checked = !checkbox.checked;
+            e.preventDefault();
+          } else if (checkbox.checked && !sidebar.contains(target)) {
+            /* click outside the sidebar when sidebar is open */
+            checkbox.checked = false;
+          }
+        }, false);
+      })(document);
+    </script>
+  </body>
+  
+  <script id="dsq-count-scr" src="//jum0.disqus.com/count.js" async></script>
+  
+</html>

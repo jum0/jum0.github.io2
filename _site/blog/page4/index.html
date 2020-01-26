@@ -23,7 +23,7 @@
   <!-- 탭에 나타나는 부분 -->
   <title>
     
-      개발자 계정 등록하지 않고 아이폰으로 테스트하기 &middot; jum0
+      Blog &middot; jum0
     
   </title>
 
@@ -111,7 +111,13 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
             
             
               <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#TIL">
-                TIL
+                <!-- TIL -->
+                
+                TIL 
+                  
+                  
+                  ( 9 )
+                   <!-- 윗 부분이 괄호  -->
               </a>
           
         
@@ -120,7 +126,13 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
             
             
               <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Project">
-                Project
+                <!-- Project -->
+                
+                Project 
+                  
+                  
+                  ( 0 )
+                   <!-- 윗 부분이 괄호  -->
               </a>
           
         
@@ -129,7 +141,13 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
             
             
               <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Swift">
-                Swift
+                <!-- Swift -->
+                
+                Swift 
+                  
+                  
+                  ( 2 )
+                   <!-- 윗 부분이 괄호  -->
               </a>
           
         
@@ -138,7 +156,13 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
             
             
               <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#iOS">
-                iOS
+                <!-- iOS -->
+                
+                iOS 
+                  
+                  
+                  ( 2 )
+                   <!-- 윗 부분이 괄호  -->
               </a>
           
         
@@ -147,7 +171,13 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
             
             
               <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/categories/#Life">
-                Life
+                <!-- Life -->
+                
+                Life 
+                  
+                  
+                  ( 0 )
+                   <!-- 윗 부분이 괄호  -->
               </a>
           
         
@@ -156,7 +186,13 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
             
             
               <a class="sidebar-nav-item sidebar-nav-item-sub " href="/blog/tags/">
-                Tags
+                <!-- Tags -->
+                
+                Tags 
+                  
+                  
+                  ( 0 )
+                   <!-- 윗 부분이 괄호  -->
               </a>
           
         
@@ -212,155 +248,51 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
       </div>
 
       <div class="container content">
-        <div class="post">
-  <h1 class="post-title">개발자 계정 등록하지 않고 아이폰으로 테스트하기</h1>
-  <span class="post-date">21 Dec 2019</span>
-   | 
+        <div class="posts">
   
-    <a href="/blog/tags/#ios" class="post-tag">iOS</a>
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2013/12/31/whats-jekyll/">
+        What's Jekyll?
+      </a>
+    </h1>
+
+    <span class="post-date">31 Dec 2013</span>
+     | 
+    
+    
+
+    <article>
+      <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/mojombo/jekyll/blob/master/README.markdown">the project’s readme</a>:</p>
+
+<blockquote>
+  <p>Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
+</blockquote>
+
+<p>It’s an immensely useful tool and one we encourage you to use here with Lanyon.</p>
+
+<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
+
+    <article>
+    <div class="post-more">
+      
+      <a href="/2013/12/31/whats-jekyll/#disqus_thread"> <i class="fa fa-comments" aria-hidden="true"></i>Comment</a>&nbsp;
+      
+      <a href="/2013/12/31/whats-jekyll/"><i class="fa fa-plus-circle" aria-hidden="true"></i>Read more</a>
+    </div>
+  </div>
   
-    <a href="/blog/tags/#developer-account" class="post-tag">Developer-Account</a>
-  
-    <a href="/blog/tags/#build" class="post-tag">build</a>
-  
-  
-  <article>
-    <p>아이폰으로 Xcode를 빌드하기 위해서는 몇 가지만 체크하면 된다.</p>
-
-<ol>
-  <li>Xcode와 iOS 버전 확인</li>
-  <li>애플 개발자 계정 추가하기</li>
-  <li>앱 서명하기(sign the app)</li>
-</ol>
-
-<h3 id="1-xcode와-ios-버전-확인">1. Xcode와 iOS 버전 확인</h3>
-
-<h4 id="11-xcode-버전-확인">1.1 Xcode 버전 확인</h4>
-
-<p><img src="http://localhost:4000/assets/img/post_img/191221/1.png" /></p>
-
-<p>Xcode 버전은 사진과 같이 상단 메뉴 바에서 <strong>Xcode - About Xcode </strong>를 눌러보면 확인할 수 있다.</p>
-
-<h4 id="12-ios-버전-확인">1.2 iOS 버전 확인</h4>
-
-<p><img src="http://localhost:4000/assets/img/post_img/191221/2.png" /></p>
-
-<p>영어</p>
-
-<ul>
-  <li><strong>General - About</strong></li>
-</ul>
-
-<p>한글</p>
-
-<ul>
-  <li><strong>설정 - 일반 - 정보</strong></li>
-</ul>
-
-<p>여기서 <strong>Xcode와 iOS의 버전(소수점)이 동일한지 확인</strong>해주면 된다.</p>
-
-<p>두 버전이 같지 않다면, 쉽게 맞출 수 있는 방법으로 둘다 최신으로 업데이트해주면 된다.</p>
-
-<p>(19.12.21 기준 Xcode 최신 버전 11.3, iOS 최신 버전 13.3)</p>
-
-<h3 id="2-애플-개발자-계정-추가하기">2. 애플 개발자 계정 추가하기</h3>
-
-<p><img src="http://localhost:4000/assets/img/post_img/191221/3.png" /></p>
-
-<p>개발자 계정 추가는 메뉴에서 <strong>Xcode - Preferences - Accounts - +버튼</strong>으로 Apple 계정의 ID와 PW를 입력하면 된다.</p>
-
-<p><img src="http://localhost:4000/assets/img/post_img/191221/4.png" /></p>
-
-<p>계정 추가를 마친 화면은 위의 사진과 같다.(개인정보는 가렸어요.)</p>
-
-<h3 id="3-앱-서명하기-sign-the-app">3. 앱 서명하기 (sign the app)</h3>
-
-<p>sign을 임의로 저렇게 번역했는데, 사실 정확하게 의미를 전달했는지 잘 모르겠다ㅋㅋ</p>
-
-<p><img src="http://localhost:4000/assets/img/post_img/191221/5.png" /></p>
-
-<p>사진과 같이 왼쪽 메뉴에서 프로젝트를 클릭하고 상단에 <strong>Signing &amp; Capabilities</strong>를 눌러 나오는 내용을 확인한다.</p>
-
-<p>여기에서 확인한 부분은 다음과 같다.</p>
-
-<ol>
-  <li>Automatically manage signing에 체크가 되어 있는지</li>
-  <li>Team이 아까 2번에서  추가한 계정으로 되어 있는지</li>
-</ol>
-
-<p>이제 아이폰을 연결하고 첫 번째 사진의 빨간 박스 부분을 두 번째 사진과 같이 바꿔준다.</p>
-
-<p><img src="http://localhost:4000/assets/img/post_img/191221/6.png" alt="pic1" /></p>
-
-<p>​</p>
-
-<p><img src="http://localhost:4000/assets/img/post_img/191221/7.png" alt="pic2" /></p>
-
-<p>그리고 빌드를 하면 끝이 난다.</p>
-
-<p>참고로 빌드할 때, 나오는 keychain은 따로 변경하지 않았다면, 맥의 비밀번호를 입력하면 된다.</p>
-
-<p><img src="http://localhost:4000/assets/img/post_img/191221/8.png" /></p>
-
-<p>또, 맥과 아이폰이 같은 네트워크에 연결되어 있다면 <strong>Window - Device and Simulators</strong>에서 <strong>Connect via network</strong> 박스에 체크해줌으로써 맥과 아이폰을  연결하지 않고  블루투스로도 빌드가 가능하다.</p>
-
-<p>혹시라도 잘못된 부분이 있으면 알려주세요!</p>
-
-
-  </article>
 </div>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
     
-      <li>
-        <h3>
-          <a href="/ios/2019/12/27/one-line-delete-shortcut-in-xcode/">
-            한 줄 삭제 단축키
-            <small>27 Dec 2019</small>
-          </a>
-        </h3>
-      </li>
+      <a class="pagination-item newer" href="/blog/page3">Newer</a>
     
-      <li>
-        <h3>
-          <a href="/2014/01/02/introducing-lanyon/">
-            Introducing Lanyon
-            <small>02 Jan 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2014/01/01/example-content/">
-            Example content
-            <small>01 Jan 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-</div>
-
-
-<div class="comments">
-  <h2>Comments</h2>
-  <div id="disqus_thread"></div>
-  <script>
-var disqus_config = function () {
-  this.page.url = 'http://localhost:4000/ios/2019/12/21/iPhone_test_without_developer_account/'; // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = '/ios/2019/12/21/iPhone_test_without_developer_account'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-(function() {
-  var d = document, s = d.createElement('script');
-  s.src = '//jum0.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-})();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
 </div>
 
 
