@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 한 줄 삭제 단축키
+title: Xcode) 한 줄 삭제 단축키
 tags: iOS shortcut 
 categories: iOS
 ---
