@@ -43,7 +43,7 @@ The sheet presentation style appears as a *card* that partially covers the under
 
 > 버튼 탭하기
 
-❗️Use a sheet for nonimmersive modal content that doesn't enable a complex task.
+Use a sheet for nonimmersive modal content that doesn't enable a complex task.
 
 > 복잡한 작업을 하지 않도록 하는 (컴퓨터 시스템이 사용자를) 에워싸지 않는 듯한 모달 콘텐츠에 sheet를 사용하세요.
 

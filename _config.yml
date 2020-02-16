@@ -46,8 +46,8 @@ nav:
     - { Project: '/blog/categories/#Project' }
     - { Swift: '/blog/categories/#Swift' }
     - { iOS: '/blog/categories/#iOS' }
-    - { Algorithm: '/blog/categoreis/#Algorithm' }
-    - { HIG: '/blog/categoreis/#HIG' }
+    - { Algorithm: '/blog/categories/#Algorithm' }
+    - { HIG: '/blog/categories/#HIG' }
 #    - { Life: '/blog/categories/#Life' }
     - { Tags: '/blog/tags/' }
   Github Project:
